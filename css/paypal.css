@@ -19,7 +19,7 @@ h2{
     font-style: italic;
 }
 div{
-    margin: 300px 0;;
+    margin: 300px 0;
 }
 a{
     text-decoration: none;
@@ -27,7 +27,7 @@ a{
 }
 a.button{
     background-color: red;
-    color: grey;
+    color: black;
     padding: 20px 30px;
     text-align: center;
     text-decoration: none;
@@ -36,7 +36,7 @@ a.button{
     margin: 5px 3px;
     cursor: pointer;
     border-radius: 12px;
-    margin-left: 500px;
+    margin-left: 45%;
 }
 body{
     background-image: url(../web3/apocalypse-5851414_1280.jpg);

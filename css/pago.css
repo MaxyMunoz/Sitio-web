@@ -1,0 +1,70 @@
+body{
+    background-color: #000;
+}
+h1{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    font-style: italic;
+}
+div.metodoPago{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+select{
+    width: 50%;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid white;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+}
+select:hover{
+    border: 2px solid #000;
+}
+div.loginsteam{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+div.pago{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+.metodoPago img{
+    width: 120px;
+    height: 120px;
+}
+ul{
+    list-style-type: none;
+    font-size: 25px;
+    color: red; 
+    text-align: center;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+ul li{
+    float:left;
+}
+ul li img{
+    display: block;
+    color: red;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
