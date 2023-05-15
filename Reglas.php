@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta viewport="width=device-width, initial-scale=1.0">
         <title>Regras Loucos BR</title>
         <link rel="stylesheet" href="css/estilos.css"/>
     </head>
@@ -35,6 +36,6 @@
         </table>
         <img src="web3/promocional.png" alt="loco 7 days"   />
         <hr/>
-        <p><a class="button" href="index.html"><b>Inicio</b></a></p>
+        <p><a class="button" href="index.php"><b>Inicio</b></a></p>
     </body>
 </html>

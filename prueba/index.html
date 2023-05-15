@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login con Steam</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://steamcommunity.com/public/javascript/steamcommunity.js?v=7P1gN0uwqkl2"></script>
+  </head>
+  <body>
+    <a href="#" id="steamLogin"
+      ><img
+        src="https://steamcommunity-a.akamaihd.net/public/images/signinthroughsteam/sits_large_noborder.png"
+    /></a>
+
+    <script type="text/javascript">
+      var steamId;
+
+      $(document).ready(function () {
+        $("#steamLogin").click(function () {
+          var loginWindow = window.open(
+            "https://steamcommunity.com/openid/login?openid.claimed_id=http://specs.openid.net/auth/2.0/identifier_select&openid.identity=http://specs.openid.net/auth/2.0/identifier_select&openid.mode=checkid_setup&openid.ns=http://specs.openid.net/auth/2.0&openid.realm=http://localhost&openid.return_to=http://localhost"
+          );
+          var pollTimer = window.setInterval(function () {
+            try {
+              if (loginWindow.closed) {
+                window.clearInterval(pollTimer);
+                steamId = getSteamId();
+                alert("Steam login success! Your Steam ID is: " + steamId);
+              }
+            } catch (e) {
+              console.log(e);
+            }
+          }, 200);
+        });
+
+        function getSteamId() {
+          var authSession = new SteamCommunity();
+          authSession.getSessionID(function (err, sessionID) {
+            if (err) {
+              console.log(err);
+            } else {
+              authSession.webLogOn(function (sessionID, newCookie) {
+                $.ajax({
+                  url: "https://api.steampowered.com/ISteamUser/AuthenticateUserTicket/v1/",
+                  method: "POST",
+                  data: {
+                    appid: "480",
+                    ticket: newCookie.ticket,
+                    steamid: newCookie.steamid,
+                  },
+                  success: function (result) {
+                    console.log(result);
+                    if (result.response.params.result === "OK") {
+                      return result.response.params.steamid;
+                    }
+                  },
+                  error: function (error) {
+                    console.log(error);
+                  },
+                });
+              });
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -39,18 +39,25 @@ function ready() {
     }
 
     //Agregamos funcionalidad al botón comprar
-    document.getElementsByClassName('btn-pagar')[0].addEventListener('click', pagarClicked)
+    document.getElementsByClassName('btn-pagar')[0].addEventListener('click', pagarClicked);
+    //document.getElementById('btnpagar')[0].addEventListener('click', irAPagar);
+    //document.getElementById('btnpagar').onclick = function(){
+    //    irAPagar();
+    //}
 }
 //Eliminamos todos los elementos del carrito y lo ocultamos
 function pagarClicked() {
     //alert("Gracias por la compra");
     //Elimino todos los elmentos del carrito
-    var carritoItems = document.getElementsByClassName('carrito-items')[0];
-    while (carritoItems.hasChildNodes()) {
-        carritoItems.removeChild(carritoItems.firstChild)
-    }
-    actualizarTotalCarrito();
-    ocultarCarrito();
+    //var carritoItems = document.getElementsByClassName('carrito-items')[0];
+    //while (carritoItems.hasChildNodes()) {
+    //    carritoItems.removeChild(carritoItems.firstChild)
+    //}
+    const total = actualizarTotalCarrito();
+    console.log("total",total);
+    window.location.href ="selectorpago.php?total="+total;
+    
+    //ocultarCarrito();
 }
 //Funciòn que controla el boton clickeado de agregar al carrito
 function agregarAlCarritoClicked(event) {
@@ -154,7 +161,7 @@ function eliminarItemCarrito(event) {
     var buttonClicked = event.target;
     buttonClicked.parentElement.parentElement.remove();
     //Actualizamos el total del carrito
-    actualizarTotalCarrito();
+    const total =actualizarTotalCarrito();
 
     //la siguiente funciòn controla si hay elementos en el carrito
     //Si no hay elimino el carrito
@@ -194,4 +201,6 @@ function actualizarTotalCarrito() {
     document.getElementsByClassName('carrito-precio-total')[0].innerText = 'BRL$' + total.toLocaleString("es") + ",00";
     return total;
 }
+
+
 

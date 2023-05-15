@@ -70,7 +70,7 @@
             <strong>Tu Total</strong>
             <span class="carrito-precio-total"> $120.000,00 </span>
           </div>
-          <a href="selectorpago.html" class="btn-pagar">Pagar <i class="fa-solid fa-bag-shopping"></i></a>
+          <button id="btnpagar"  class="btn-pagar" >Pagar <i class="fa-solid fa-bag-shopping"></i></a>
           <!--button class="btn-pagar">
             Pagar</a> <i class="fa-solid fa-bag-shopping"></i>
           </button-->
@@ -112,7 +112,7 @@
     </section>
     <hr />
     <h2>
-      <a class="button" href="../index.html"><b>Inicio</b></a>
+      <a class="button" href="../index.php"><b>Inicio</b></a>
     </h2>
   </body>
 </html>

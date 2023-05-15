@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta viewport="width=device-width, initial-scale=1.0">
         <title>Loucos BR</title>
         <link rel="stylesheet" href="css/estilos.css"/>
     </head>
@@ -11,15 +12,15 @@
         alt="loco 7 days"  width="100%" height="200" object-fit: cover;  /></a>
         <hr/>
         <ul>
-            <li><a href="index.html">INICIO</a></li>
-            <li><a href="Admin.html">CONTATO DE ADM</a></li>
-            <li><a href="Reglas.html">REGRAS DO SERVIDOR</a></li>
-            <li><a href="comandos.html">COMANDOS</a></li>
+            <li><a href="index.php">INICIO</a></li>
+            <li><a href="Admin.php">CONTATO DE ADM</a></li>
+            <li><a href="Reglas.php">REGRAS DO SERVIDOR</a></li>
+            <li><a href="comandos.php">COMANDOS</a></li>
             <li><a href="https://discord.gg/SKTWxAME"><img src="web3/discord.png"
                 alt="Discord servidor"width="40px" style="margin-right: 25%; ;"/></a></li>
             <li><a href=""><img src="web3/icone_discord.png"
                 alt="Discord servidor"width="40px" style="margin-right: 25%; ;"/></a></li> 
-            <li><a href="/carrito/Carrito.html">
+            <li><a href="./carrito/Carrito.php">
                 <img src="web3/compras.png"
                 alt="comprar kit" width="40px" style="margin-right: 25%;"/></a></li>       
         </ul>
@@ -36,12 +37,6 @@
         <img src="web3/7.png"alt="cidade PvP" width="1200" />
         <img src="web3/8.png"alt="cidade PvP" width="1200" />
         <hr/>
-        <h3>Redes de servidor</h3>
-        <a href="https://discord.gg/SKTWxAME"><img src="https://i.pinimg.com/236x/51/e5/7d/51e57d66382e59b19383e0ca9561957a.jpg"
-            alt="Discord servidor"width="60" style="margin-right: 45%; ;"/></a>
-        <a href=" steam://connect/168.205.176.72:26900 ">
-            <img src="https://icones.pro/wp-content/uploads/2022/05/icone-steam.png"
-            atl="direccion servidor"width="60" style="margin-top: -3.2%;margin-right:50%; ;" /></a>
     </body>
 
 </html>
